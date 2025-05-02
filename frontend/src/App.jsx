@@ -13,7 +13,7 @@ import PageLoader from "./components/PageLoader.jsx";
 import useAuthUser from "./hooks/useAuthUser.js";
 import Layout from "./components/Layout.jsx";
 import { useThemeStore } from "./store/useThemeStore.js";
-import OnboardingPage from "./pages/OnBoardingPage.jsx";
+import OnBoardingPage from './pages/OnBoardingPage';
 
 const App = () => {
   const { isLoading, authUser } = useAuthUser();
@@ -92,7 +92,7 @@ const App = () => {
           element={
             isAuthenticated ? (
               !isOnboarded ? (
-                <OnboardingPage />
+                <OnBoardingPage />
               ) : (
                 <Navigate to="/" />
               )
